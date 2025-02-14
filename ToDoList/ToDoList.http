@@ -1,0 +1,24 @@
+@ToDoList_HostAddress = http://localhost:5103
+
+GET {{ToDoList_HostAddress}}/ToDoList/
+Accept: application/json
+###
+GET {{ToDoList_HostAddress}}/ToDoList/2
+Accept: application/json
+###
+DELETE {{ToDoList_HostAddress}}/ToDoList?id=2
+Accept: application/json
+###
+POST {{ToDoList_HostAddress}}/ToDoList?text=test
+Accept: application/json
+###
+PUT {{ToDoList_HostAddress}}/ToDoList?text=test
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "text": "edited",
+  "isCompleted": true
+}
+###
