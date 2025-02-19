@@ -1,6 +1,6 @@
-using ToDoList.Services;
+using Domain.Services;
 
-namespace ToDoList;
+namespace Api;
 
 public class Program
 {

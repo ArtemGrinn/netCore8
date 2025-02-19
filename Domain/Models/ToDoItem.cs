@@ -1,4 +1,4 @@
-namespace ToDoList.Models;
+namespace Domain.Models;
 
 public class ToDoItem(int id, string text)
 {

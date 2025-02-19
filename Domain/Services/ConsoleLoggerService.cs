@@ -1,4 +1,4 @@
-namespace ToDoList.Services;
+namespace Domain.Services;
 
 public class ConsoleLoggerService : ILoggerService
 {

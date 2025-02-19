@@ -1,3 +1,5 @@
+using Domain.Services;
+
 namespace MVC;
 
 public class Program
@@ -8,7 +10,8 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
-
+        builder.Services.AddSingleton<IToDoService, ToDoService>();
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

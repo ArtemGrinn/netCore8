@@ -1,10 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListApi", "ToDoListApi\ToDoListApi.csproj", "{ADBA0B71-EE70-4899-8DB0-7813B470CFF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{ADBA0B71-EE70-4899-8DB0-7813B470CFF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{6ED50D7E-BAD9-4EE8-B3C4-BF07C62EDC6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{068F1691-D134-44D3-BCA1-0AC7DE406423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{159B8EFE-2094-4F21-9FEB-7A34F7E9590A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,9 @@ Global
 		{068F1691-D134-44D3-BCA1-0AC7DE406423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{068F1691-D134-44D3-BCA1-0AC7DE406423}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{068F1691-D134-44D3-BCA1-0AC7DE406423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{159B8EFE-2094-4F21-9FEB-7A34F7E9590A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159B8EFE-2094-4F21-9FEB-7A34F7E9590A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159B8EFE-2094-4F21-9FEB-7A34F7E9590A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159B8EFE-2094-4F21-9FEB-7A34F7E9590A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
-using ToDoList.Models;
+using Domain.Models;
 
-namespace ToDoList.Services;
+namespace Domain.Services;
 
 public class ToDoService : IToDoService
 {

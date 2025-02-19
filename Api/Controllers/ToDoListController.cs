@@ -1,8 +1,8 @@
+using Domain.Models;
+using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
-using ToDoList.Services;
 
-namespace ToDoList.Controllers;
+namespace Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
