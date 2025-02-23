@@ -1,10 +1,10 @@
 namespace Domain.Models;
 
-public class ToDoItem(int id, string text)
+public class ToDoItem
 {
-    public int Id { get; set; } = id;
+    public int Id { get; set; }
 
-    public string? Text { get; set; } = text;
+    public string? Text { get; set; }
 
-    public bool IsCompleted { get; set; } = false;
+    public bool IsCompleted { get; set; }
 }

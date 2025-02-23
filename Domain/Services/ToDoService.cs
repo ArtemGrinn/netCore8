@@ -35,10 +35,15 @@ public class ToDoService : IToDoService
         _items[index] = item;
     }
     
-    public void AddItem(string text)
+    public void AddItem(string text, bool isCompleted = false)
     { 
         var nextId = _items.Count > 0 ? _items.Max(x => x.Id) + 1 : 1;
-        _items.Add(new ToDoItem(nextId, text));
+        _items.Add(new ToDoItem
+        {
+            Id = nextId, 
+            Text = text, 
+            IsCompleted = isCompleted
+        });
     }
     
     public void DeleteItem(int id)

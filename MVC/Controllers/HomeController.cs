@@ -1,7 +1,6 @@
-using System.Diagnostics;
+using Domain.Models;
 using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
-using MVC.Models;
 
 namespace MVC.Controllers;
 
@@ -16,19 +15,35 @@ public class HomeController : Controller
         _service = service;
     }
 
+    [HttpGet]
     public IActionResult Index()
     {
         return View(_service.GetList());
     }
-
-    public IActionResult Privacy()
+    
+    [HttpGet]
+    public IActionResult Add()
     {
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    [HttpGet]
+    public IActionResult Edit(int id)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View(_service.FindItemById(id));
+    }
+    
+    [HttpPost]
+    public IActionResult Add(ToDoItem item)
+    { 
+        _service.AddItem(item.Text, item.IsCompleted);
+        return RedirectToAction("Index");
+    }
+    
+    [HttpPost]
+    public IActionResult Edit(ToDoItem item)
+    { 
+        _service.EditItem(item);
+        return RedirectToAction("Index");
     }
 }

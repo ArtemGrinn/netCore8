@@ -1,0 +1,22 @@
+﻿@model Domain.Models.ToDoItem
+@{
+    ViewData["Title"] = "New item";
+}
+<style>
+    .form-row {
+        margin: 10px 0;
+    }
+</style>
+
+@using (Html.BeginForm("Add", "Home", FormMethod.Post))
+{
+    <div class="form-row">
+        @Html.TextBoxFor(m => m.Text)
+    </div>
+    <div class="form-row">
+        @Html.CheckBoxFor(m => m.IsCompleted) @Html.Label("Завершено")
+    </div>
+    <input type="submit" value="Сохранить" />
+}
+
+ 
