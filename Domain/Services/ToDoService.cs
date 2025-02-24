@@ -8,17 +8,17 @@ public class ToDoService : IToDoService
 
     public ToDoService()
     { 
-        AddItem("Создать веб-приложение");
-        AddItem("Создать сервис списка дел");
-        AddItem("Создать модель");
-        AddItem("Создать контроллер");
-        AddItem("Добавить middleware");
-        AddItem("Добавить логирование в контроллер");
+        AddItem("BobSmith@email.com", "Создать веб-приложение");
+        AddItem("BobSmith@email.com", "Создать сервис списка дел");
+        AddItem("BobSmith@email.com", "Создать модель");
+        AddItem("BobSmith@email.com", "Создать контроллер");
+        AddItem("AliceSmith@email.com", "Добавить middleware");
+        AddItem("AliceSmith@email.com", "Добавить логирование в контроллер");
     }
     
-    public IEnumerable<ToDoItem> GetList()
+    public IEnumerable<ToDoItem> GetList(string email)
     {
-        return _items;
+        return _items.Where(x => x.Email == email);
     }
 
     public ToDoItem? FindItemById(int id)
@@ -35,13 +35,14 @@ public class ToDoService : IToDoService
         _items[index] = item;
     }
     
-    public void AddItem(string text, bool isCompleted = false)
+    public void AddItem(string email, string text, bool isCompleted = false)
     { 
         var nextId = _items.Count > 0 ? _items.Max(x => x.Id) + 1 : 1;
         _items.Add(new ToDoItem
         {
             Id = nextId, 
             Text = text, 
+            Email = email,
             IsCompleted = isCompleted
         });
     }

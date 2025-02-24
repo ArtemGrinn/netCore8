@@ -1,6 +1,6 @@
-﻿@model Domain.Models.ToDoItem?
+﻿@model Domain.Models.ToDoItem
 @{
-    ViewData["Title"] = "Edit item";
+    ViewData["Title"] = "New item";
 }
 <style>
     .form-row {
@@ -8,9 +8,8 @@
     }
 </style>
 
-@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+@using (Html.BeginForm("Add", "ToDo", FormMethod.Post))
 {
-    @Html.HiddenFor(m => m.Id)
     <div class="form-row">
         @Html.TextBoxFor(m => m.Text)
     </div>

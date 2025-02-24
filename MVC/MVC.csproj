@@ -10,4 +10,15 @@
       <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Duende.IdentityModel" Version="7.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Views\ToDo\Add.cshtml" />
+      <AdditionalFiles Include="Views\ToDo\Edit.cshtml" />
+      <AdditionalFiles Include="Views\ToDo\Index.cshtml" />
+    </ItemGroup>
+
 </Project>

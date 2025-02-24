@@ -21,7 +21,7 @@ public class ToDoListController : ControllerBase
     public IEnumerable<ToDoItem> Get()
     {
         _logger.AddMessage($"Logger Id: {_logger.GetHashCode()}, Service Id: {_service.GetHashCode()}");
-        return _service.GetList();
+        return _service.GetList("api");
     }
     
     [HttpGet]
@@ -34,7 +34,7 @@ public class ToDoListController : ControllerBase
     [HttpPost]
     public void Post(string text)
     { 
-        _service.AddItem(text);
+        _service.AddItem("api", text);
     }
     
     [HttpPut]

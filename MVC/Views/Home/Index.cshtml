@@ -5,12 +5,4 @@
 
 <div class="text-center">
     <h1 class="display-4">ToDoList</h1>
-    <a href="@Url.Action("Add", "Home")">add item</a>
 </div>
-@foreach (var item in Model)
-{
-    <div>
-        <input type="checkbox" checked="@item.IsCompleted" disabled/> @item.Text
-        <a href="@Url.Action("Edit", "Home", new {id = item.Id})">edit</a>
-    </div>
-}

@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var name = User.FindFirst("name")?.Value;
+    var email = User.FindFirst("email")?.Value;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -23,9 +27,16 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="ToDo" asp-action="Index">List</a>
                     </li>
                 </ul>
+               @if (!string.IsNullOrEmpty(name))
+                {
+                    <div>
+                        @name (@email)
+                        <a class="nav-item text-dark" asp-area="" asp-controller="ToDo" asp-action="Logout">Выход</a>
+                    </div>
+                }
             </div>
         </div>
     </nav>
