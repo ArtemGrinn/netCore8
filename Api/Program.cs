@@ -27,11 +27,8 @@ public class Program
         
         //аутентификация
         var tokenSettings = builder.Configuration.GetSection("Token");
-        builder.Services.AddAuthentication(options =>
-        {
-            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(options =>
+        builder.Services.AddAuthentication("Bearer")
+            .AddJwtBearer(options =>
         {
             options.TokenValidationParameters = new TokenValidationParameters()
             {

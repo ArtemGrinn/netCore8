@@ -27,7 +27,7 @@ public class UsersController(
     /// </summary>
     /// <returns>список пользователей</returns>
     [HttpGet]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin", AuthenticationSchemes = "Bearer")]
     public IEnumerable<User> GetUsers()
     {
         return userManager.Users.ToList();
